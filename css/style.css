@@ -54,3 +54,7 @@ canvas.show {
 #canvasID {
   z-index: 9999;
 }
+
+small {
+  margin-top: 1000px;
+}

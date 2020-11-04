@@ -18,7 +18,7 @@ function DrawPlaceholder() {
 }
 function DrawOverlay(img) {
   ctx.drawImage(img, 0, 0);
-  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+  ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 function DrawText() {
@@ -65,8 +65,18 @@ function handleImage(e) {
   reader.readAsDataURL(e.target.files[0]);
 }
 function convertToImage() {
-  window.open(canvas.toDataURL("png"));
+  //   window.open(canvas.toDataURL("png"));
+  var dataURL = canvas.toDataURL("png");
+  button.href = dataURL;
 }
 document.getElementById("download").onclick = function download() {
-  convertToImage();
+  saveAs();
 };
+
+function saveAs() {
+  var a = document.createElement("a");
+  a.href = dataURL = canvas.toDataURL("png");
+  a.download = "image.png";
+
+  a.click();
+}
