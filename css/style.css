@@ -10,7 +10,7 @@ body {
 
 .page-wrap {
   display: inline-block;
-  margin: 2em auto;
+  /* margin: 2em auto; */
 }
 
 .controls__input {
@@ -35,7 +35,7 @@ body {
   display: block;
   font-size: 0.8em;
   padding-top: 0.3em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 canvas {
@@ -55,6 +55,19 @@ canvas.show {
   z-index: 9999;
 }
 
-small {
-  margin-top: 1000px;
+.font-small {
+  font-size: xx-small;
+}
+
+textarea {
+  outline: none !important;
+  border: 1px solid red;
+  box-shadow: 0 0 10px #719ece;
+}
+
+.margin-top {
+  margin-top: 1em;
+}
+.margin-bottom {
+  margin-bottom: 1em;
 }

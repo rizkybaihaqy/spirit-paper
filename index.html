@@ -10,26 +10,47 @@
 </head>
 
 <body>
-    <h1>SPASI 2 KALI UNTUK GARIS BARU</h1>
+    <h1>Udah Auto Garis Baru</h1>
     <div class="page-wrap">
         <div class="controls">
-            <input class="controls__input" type="file" id="imageLoader" name="imageLoader" />
-            <label class="controls__label" for="name">First, choose an image.</label>
+            <!-- <input class="controls__input" type="file" id="imageLoader" name="imageLoader" />
+            <label class="controls__label" for="name">First, choose an image.</label> -->
 
+            <input hidden type="file" name="imageLoader" id="imageLoader">
+
+            <label for="pilihanGambar" class="controls__label">Pilih Gambar</label>
+            <select name="" id="pilihanGambar" class="margin-bottom">
+                <option selected disabled value="imgs/500.png">--Pilih Gambar--</option>
+                <option value="imgs/es.png">es</option>
+                <option value="imgs/es3.png">es3</option>
+                <option value="imgs/es4.png">es4</option>
+                <option value="imgs/Kinderjoy.png">Kinder Joy</option>
+                <option value="imgs/SUSU.png">Susu</option>
+                <option value="imgs/Beer.jpg">Beer</option>
+                <option value="imgs/Sauvignon_Blanc.jpg">Sauvignon Blanc</option>
+                <option value="imgs/5dolar.jpg">5 dolar</option>
+                <option value="imgs/beer2.jpg">Beer 2</option>
+                <option value="imgs/botol.jpg">Botol</option>
+                <option value="imgs/botol2.jpg">Botol 2</option>
+                <option value="imgs/malkis.jpg">Malkis</option>
+            </select>
+
+            <label class="controls__label" for="name">Isi Teks Disini</label>
             <!-- <input class="controls__input" id="name" type="text" value="" /> -->
             <textarea class="controls__input" id="name" cols="30" rows="10"></textarea>
-            <label class="controls__label" for="name">Overlay Text</label>
         </div>
+
+        <button class="margin-top margin-bottom" id="download">download</button>
+
         <div id="canvas-wrap">
             <canvas style="display:block" id="imageCanvas" width=500px height=500px>
                 <canvas id="canvasID"></canvas>
             </canvas>
         </div>
-        <br>
-        <button id="download">download</button>
-        <br>
-        <small>credit mba Ashley Hebler</small>
+
+        <p class="margin font-small">credit mba Ashley Hebler</p>
     </div>
+
     <script src="js/script.js"></script>
 </body>
 
